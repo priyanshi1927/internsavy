@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Countdown Web Application</title>
+    <link rel="icon" 
+    type="image/png" 
+    href="Icon.jpg">
+</head>
+<body>
+    <div class="countdown-container">
+        <h1>Countdown Timer</h1>
+        
+        <div class="date-time-container">
+            <div class="date-input">
+                <label for="dateInput">Select a date:</label>
+                <input type="date" id="dateInput">
+            </div>
+            
+            <div class="time-input">
+                <label for="timeInput">Select a time:</label>
+                <input type="time" id="timeInput" step="1">
+            </div>
+        </div>
+        
+        <button id="startButton">Start Countdown</button>
+        <button id="historyButton">History</button>
+        
+        <div id="countdownDisplay"></div>
+        <div id="historyDisplay"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
