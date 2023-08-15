@@ -1,0 +1,255 @@
+/**
+ * @Author: Your name
+ * @Date:   2023-08-10 20:25:44
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2023-08-13 06:20:22
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the container */
+.container {
+    position: relative;
+    z-index: 2; /* Ensure weather content is above the animation */
+    overflow: hidden; /* Ensure animation doesn't overflow */
+    font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #434242;
+    min-height: 100vh; /* Set minimum height to cover the entire viewport */
+      /* background-image: url('christopher-kraklau-blackhole4-5smaller.jpg'); */
+      background-image: url('thunderstorm-3440450.jpg');
+      background-size: cover;
+      background-position: center;
+      -webkit-backdrop-filter: blur(50px); /* For Safari/Chrome */
+      backdrop-filter: blur(60px);
+}
+
+/* Styling for the fixed header */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.nav-logo img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.nav-search {
+    padding: 5px;
+    margin-left: 340px;
+    width: 800px;
+    border-radius: 15px;
+    border-color: #001bc7;
+
+}
+
+#searchBtn {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #006fe5;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #f96103;
+}
+
+/* Styling for weather information */
+.content {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(36, 36, 36, 0.8); /* Adjust the alpha value as needed */
+    border-radius: 5px;
+    box-shadow: 0 0 7px 7px rgba(11, 11, 11, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+.weather-image img {
+    width: 110px; /* Adjust the width as needed */
+    height: 110px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 50%;
+    background-color: #161616;
+    box-shadow: 0 0 7px 7px rgba(255, 255, 255, 0.2);
+}
+
+.weather-details h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.weather-details p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+#temperature {
+    font-size: 30px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #2bff00;
+}
+/* Styling for forecast */
+.forecast {
+
+
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    padding: 10px; /* Add padding to separate the content from the background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+.forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.forecast-item {
+    background-color: #000000;
+    color: #f8f8f8;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; /* Add this line to space out items */
+}
+
+.forecast-time {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.forecast-icon {
+    color: #30ff25;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.forecast-temp {
+    font-size: 14px;
+}
+
+/* Your existing CSS styles */
+
+/* Add styles for gradient background */
+#airQuality {
+    background: linear-gradient(to right, #287a28, #e40000);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+
+
+
+/* ... Your existing CSS styles ... */
+
+/* Add styles for air quality indicator */
+/* ... Your existing CSS styles ... */
+
+/* Add a new class for air quality color */
+.content-poor-air-quality {
+    background: linear-gradient(to bottom, #ff0000, #ffffff);
+}
+
+/* ... Your existing CSS styles ... */
+
+/* ... Your existing CSS ... */
+/* Add styles for air quality indicator */
+.air-quality {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.indicator {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.good-air-quality {
+    background: linear-gradient(to bottom, #00e400, #ffffff);
+}
+
+.moderate-air-quality {
+    background: linear-gradient(to bottom, #ffff00, #ffffff);
+}
+
+.unhealthy-sg-air-quality {
+    background: linear-gradient(to bottom, #ff7e00, #ffffff);
+}
+
+.unhealthy-air-quality {
+    background: linear-gradient(to bottom, #ff0000, #ffffff);
+}
+
+.very-unhealthy-air-quality {
+    background: linear-gradient(to bottom, #8f3f97, #ffffff);
+}
+
+.hazardous-air-quality {
+    background: linear-gradient(to bottom, #7e0023, #ffffff);
+}
+
+

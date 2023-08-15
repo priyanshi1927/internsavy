@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" 
+    type="image/png" 
+    href="christopher-kraklau-blackhole4-5smaller.jpg">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="nav-logo">
+                <img src="good-weather.png" alt="Search Icon">
+                <span>Weather App</span>
+            </div>
+            <input type="text" id="cityInput" placeholder="Enter city name" class="nav-search" list="cityList">
+            <datalist id="cityList"></datalist>
+            <button id="searchBtn">Search</button>
+        </div>
+        <div class="content" id="content">
+            <div class="weather-info" id="weatherInfo">
+                <div class="weather-image">
+                    <img src="" alt="Weather Icon" id="weatherIcon">
+                </div>
+                <div class="weather-details">
+                    <h2 id="cityName">City</h2>
+                    <p id="temperature"> </p>
+                    <p id="description">Description: </p>
+
+                    <p id="sunrise">Sunrise: </p>
+                    <p id="sunset">Sunset: </p>
+
+                    <div class="air-quality" id="airQuality">
+                        <p>Air Quality: <span id="airQualityValue"></span></p>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast" id="hourlyForecastContainer">
+                <!-- <h2>Hourly Forecast</h2> -->
+                <div class="forecast-container horizontal-scroll" id="hourlyForecast"></div>
+            </div>
+
+            <div class="forecast" id="dailyForecastContainer">
+                <!-- <h2>7-Day Forecast</h2> -->
+                <div class="forecast-container" id="dailyForecast"></div>
+            </div>
+        </div>
+    </div>
+  
+    <!-- Your animation HTML code here -->
+
+    <script src="script.js"></script>
+</body>
+</html>
